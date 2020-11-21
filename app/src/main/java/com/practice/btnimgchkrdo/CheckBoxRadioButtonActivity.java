@@ -3,6 +3,7 @@ package com.practice.btnimgchkrdo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +31,8 @@ public class CheckBoxRadioButtonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_box_radio_button);
         SetupView();
+        Typeface bTitr= Typeface.createFromAsset(getAssets(),"font/btitr.ttf");
+        chk1.setTypeface(bTitr);
         btnColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +63,22 @@ public class CheckBoxRadioButtonActivity extends AppCompatActivity {
                 }
             }
         });
+        rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.pic1:
+                        img1.setImageResource(R.drawable.iconfinder_bowling_1271431);
+                        break;
+                    case R.id.pic2:
+                        img1.setImageResource(R.drawable.iconfinder_cup_416372);
+                        break;
+                    case R.id.pic3:
+                        img1.setImageResource(R.drawable.iconfinder_equilizer_1646011);
+                        break;
+                }
+            }
+        });
     }
 
     private void SetupView() {
@@ -71,7 +90,7 @@ public class CheckBoxRadioButtonActivity extends AppCompatActivity {
         chk2 = findViewById(R.id.chkGreen);
         chk3 = findViewById(R.id.chkBlue);
         btnColor = findViewById(R.id.btnColor);
-        img1 = findViewById(R.id.imgShow);
+        img1 = findViewById(R.id.img1);
         mainLayout = findViewById(R.id.mainLayout);
     }
 }
