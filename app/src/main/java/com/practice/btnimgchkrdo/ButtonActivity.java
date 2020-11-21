@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class ButtonActivity extends AppCompatActivity {
     Button[] btns = new Button[15];
     Button btnReset;
     ArrayList<Button> buttons;
