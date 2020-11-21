@@ -184,5 +184,6 @@
         android:text="Rest Button"
         android:layout_gravity="center"
         android:textSize="18dp"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="100dp"
+        android:onClick="ResetButtons"/>
 </LinearLayout>
